@@ -3,7 +3,7 @@ require 'headless'
 class Douyu < Grape::API
   headless = Headless.new
   headless.start
-  _browser = Watir::Browser.start "http://www.douyutv.com/lcs"
+  _browser = Watir::Browser.start "http://www.douyutv.com/228649"
 
   post '/danmu' do
     all_text = _browser.text
@@ -12,5 +12,5 @@ class Douyu < Grape::API
     danmu = danmu_basic[40..danmu_length]
     { code: 0, data: { danmu: danmu } }
   end
-  
+
 end
