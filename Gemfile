@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'nokogiri'
 gem 'watir-webdriver'
+gem 'selenium-webdriver', '>= 2.5.0' 
 
 gem 'grape'
 gem 'grape-jbuilder'

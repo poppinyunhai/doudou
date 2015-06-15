@@ -1,6 +1,7 @@
 require 'watir-webdriver'
 class Douyu < Grape::API
   _browser = Watir::Browser.new :firefox
+  _browser.driver.switch_to.window(_browser.driver.window_handles[0])
   _browser.goto "http://www.douyutv.com/60062"
   post '/danmu' do
     all_text = _browser.text
