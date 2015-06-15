@@ -1,16 +1,16 @@
 require 'watir-webdriver'
+require 'headless'
 class Douyu < Grape::API
-  # _browser = Watir::Browser.new :firefox
-  # _browser.goto "http://www.douyutv.com/60062"
-  # post '/danmu' do
-  #   all_text = _browser.text
-  #   danmu_basic = all_text.split("\n")
-  #   danmu_length = danmu_basic.count - 5
-  #   danmu = danmu_basic[40..danmu_length]
-  #   { code: 0, data: { danmu: danmu } }
-  # end
-  # post '/restar' do
-  #   _browser.refresh
-  # end
+  headless = Headless.new
+  headless.start
+  _browser = Watir::Browser.start "http://www.douyutv.com/lcs"
 
+  post '/danmu' do
+    all_text = _browser.text
+    danmu_basic = all_text.split("\n")
+    danmu_length = danmu_basic.count - 5
+    danmu = danmu_basic[40..danmu_length]
+    { code: 0, data: { danmu: danmu } }
+  end
+  
 end
