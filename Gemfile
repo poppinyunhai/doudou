@@ -27,6 +27,9 @@ gem 'watir-webdriver'
 gem 'selenium-webdriver', '>= 2.5.0' 
 gem 'headless', '~> 2.1.0'
 
+# gem 'poltergeist'
+gem 'shrimp'
+
 gem 'grape'
 gem 'grape-jbuilder'
 gem 'rack-cors', :require => 'rack/cors'

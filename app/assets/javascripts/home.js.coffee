@@ -1,6 +1,6 @@
 $ ->
   swaggerUi = new SwaggerUi
-    url: "http://119.254.210.151/api/v1/doc.json"
+    url: "http://poppinyunhai_2.tunnel.mobi/api/v1/doc.json"
     dom_id: "swagger-ui-container"
     supportedSubmitMethods: ['get', 'post', 'put', 'delete']
     onComplete: (swaggerApi, swaggerUi)->
